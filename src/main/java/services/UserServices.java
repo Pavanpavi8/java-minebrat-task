@@ -20,8 +20,8 @@ public class UserServices {
 		user.setRegistrationDate(LocalDate.now());
 		user.getAddress().setRegistrationDate(LocalDate.now());
 		Address address = user.getAddress();
-		address.setUserId(user.getId());
 		userRepository.save(user);
+		address.setUserId(user.getId());
 		return user;
 	}
 
